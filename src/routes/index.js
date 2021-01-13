@@ -1,9 +1,11 @@
 //routes
-const express = require('express');
-const admin = require('./admin');
+// const express = require('express');
+import express from 'express';
+// const admin = require('./admin');
+import admin from './admin/index.js';
 
 const router = express.Router();
 
-router.use('/admin', require('./admin'));
+router.use('/admin', admin);
 
-module.exports = router;
+export default router;

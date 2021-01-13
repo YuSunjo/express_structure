@@ -1,7 +1,9 @@
-const express = require('express');
+// const express = require('express');
+import express from 'express';
 
 const router = express.Router();
-const ctrl = require('./admin.ctrl');
+// const ctrl = require('./admin.ctrl');
+import { get_pong } from './admin.ctrl.js';
 
 //    /admin
 router.get('/', (req, res) => {
@@ -9,6 +11,6 @@ router.get('/', (req, res) => {
 });
 
 //    /admin/ping
-router.get('/ping', ctrl.get_pong);
+router.get('/ping', get_pong);
 
-module.exports = router;
+export default router;

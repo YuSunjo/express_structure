@@ -1,9 +1,13 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const bodyParser = require('body-parser');
+// const express = require('express');
+import express from 'express';
+// const dotenv = require('dotenv');
+import dotenv from 'dotenv';
+// const bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
 dotenv.config();
 
-const router = require('./routes');
+// const router = require('./routes');
+import router from './routes/index.js';
 
 class App {
     constructor () {
@@ -61,4 +65,5 @@ class App {
     }
 }
 
-module.exports = new App().app;
+export default new App().app;
+// module.exports = new App().app;
